@@ -1,0 +1,173 @@
+<html>
+<!DOCTYPE HTML>
+<head>
+    <meta charset="UTF-8">
+	<title> {{ title }} </title>
+</head>
+
+<body>
+<style type="text/css">
+a {
+    color: #3C2500;
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+}
+html {
+ overflow-x: hidden;
+}
+body {
+    background-color: #FFF8EF;
+}
+h1 {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 10px;
+
+	color: #FFE8C7;
+}
+
+.img_bg {
+    position: absolute;
+    left: -2px;
+    z-index: 0;
+    top: 2px;
+}
+
+.text_field {
+    position: absolute;
+    left: 70px;
+    top: 130px;
+}
+.hero_field {
+    position: absolute;
+    left: 1320px;
+    top: 550px;
+}
+.inventory_field {
+    position: absolute;
+    left: 905px;
+    top: 130px;
+
+}
+#navigation {
+    position: fixed;
+    z-index: 3;
+    top: -2px;
+    left: -2px;
+    font-family: Roboto;
+    font-style: bold;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #3C2500;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+#site {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 490px;
+    top: 42px;
+}
+#game {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 580px;
+    top: 42px;
+}
+#account {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 670px;
+    top: 42px;
+}
+
+#other_players {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 760px;
+    top: 42px;
+}
+
+#exit {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 1660px;
+    top: 60px;
+}
+#user_name {
+    font-size: 30px;
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 1660px;
+    top: 24px;
+}
+
+.account_field {
+    position: absolute;
+    z-index: 1;
+    left: 90px;
+    top: 225px;
+}
+.friends_field {
+    position: absolute;
+    z-index: 1;
+    left: 90px;
+    top: 690px;
+}
+.heads_field {
+    position: absolute;
+    z-index: 1;
+    left: 1110px;
+    top: 225px;
+}
+.table {
+    position: absolute;
+    z-index: 1;
+    left: 120px;
+    top: 815px;
+
+ }
+
+ </style>
+<img class="img_bg" src="/static/img/background.png"/>
+<div id="navigation">
+    <img src="/static/img/navigate_panel.png"/>
+    <div id="site"><a href="/">САЙТ</a></div>
+    <div id="game"><a href="/users/game">ИГРА</a></div>
+    <div id="account"><a href="/users/account">АККАУНТ</a></div>
+    <div id="other_players"><a href="/users/scoreboard">ИГРОКИ</a></div>
+    <div id="user_name">{{current_user.name}}</div>
+    <div id="exit"><a href="/users/sign_out">ВЫЙТИ</a></div>
+</div>
+
+<img class="heads_field" src="/static/img/heads.png"/>
+<img class="account_field" src="/static/img/account.png"/>
+<img class="friends_field" src="/static/img/friends.png"/>
+<table class="table" cellpadding="1px">
+    {% for user in users %}
+        <tr>
+            <td><h1>{{user.name}} {{user.cell}}</h1></td>
+        </tr>
+    {% endfor %}
+</table>
+<audio src="/static/sounds/gamemusic.mp3" autoplay="autoplay">
+</audio>
+</body>
+</html>

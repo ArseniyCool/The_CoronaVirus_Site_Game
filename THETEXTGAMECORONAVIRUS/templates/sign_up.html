@@ -1,0 +1,366 @@
+<html>
+<!DOCTYPE HTML>
+<head>
+    <meta charset="UTF-8">
+	<title> {{ title }} </title>
+</head>
+
+<body>
+<style type="text/css">
+a {
+    color: #3C2500;
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+}
+html {
+ overflow-x: hidden;
+}
+body {
+    background-color: #FFF8EF;
+}
+
+   h1 {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 60px;
+
+	color: #A88143;
+}
+  #h1_key {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 60px;
+
+  color: #A88143;
+}
+  #h2_key {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 60px;
+
+	color: #F6DEBB;
+}
+  #h2_key:hover {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 60px;
+
+	color: #DAB392;
+}
+   h2 {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 24px;
+
+	color: #3C2500;
+}
+  #layer1_1 {
+   position: absolute;
+   left: 65%;
+   top: 700px;
+}
+  #layer1_2 {
+   position: absolute;
+   left: 65%;
+   top: 800px;
+}
+  #layer2_1 {
+   position: absolute;
+   left: 15%;
+   top: 1400px;
+}
+  #layer2_2 {
+   position: absolute;
+   left: 15%;
+   top: 1500px;
+}
+  #layer3_1 {
+   position: absolute;
+   left: 65%;
+   top: 2100px;
+}
+  #layer3_2 {
+   position: absolute;
+   left: 65%;
+   top: 2200px;
+}
+  #layer_enter {
+   position: absolute;
+   left: 10%;
+   top: 275%;
+}
+  #layer_registration {
+   position: absolute;
+   left: 20%;
+   top: 275%;
+}
+
+  #layer_about {
+   position: absolute;
+   left: 50%;
+   top: 275%;
+}
+  #layer_renewal {
+   color: #F6DEBB;
+   position: absolute;
+   left: 60%;
+   top: 275%;
+}
+
+  #rect_enter {
+  position: absolute;
+  width: 1919px;
+  height: 375px;
+  left: 0px;
+  top: 4450px;
+}
+.enter_button {
+  position: absolute;
+  width: 446px;
+  height: 56px;
+  left: 145px;
+  top: 2890px;
+
+  background: rgba(246, 222, 187, 0.4);
+  border-radius: 5px;
+}
+  ::placeholder {
+  color: rgba(168, 129, 67, 0.5);
+}
+* {box-sizing: border-box}
+
+input[type=email], input[type=password], input[type=text] {
+    font: 12px sans-serif;
+    position: absolute;
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    left: 10%;
+
+    background: #FFF0DA;
+    border: 1px solid rgba(168, 129, 67, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+}
+
+input[type=email]:focus, input[type=password]:focus, input[type=text]:focus {
+  background-color: #FFF0DA;
+  outline: none;
+}
+
+.name_btn {
+    top: 2880px;
+}
+.email_btn {
+    top: 2960px;
+}
+.password_btn {
+    top: 3040px;
+}
+
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-top: 2px;
+  margin-left: 0px;
+  width: 20%;
+  margin-bottom: 4px;
+}
+
+
+.registerbtn {
+    position: absolute;
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    left: 10%;
+    top: 3120px;
+
+    background: #FFF0DA;
+    border: 1px solid rgba(168, 129, 67, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #A88143;
+    color: #F6DEBB;
+    border: none;
+    cursor: pointer;
+}
+
+.registerbtn:hover {
+  background: #A88143
+}
+.img_logo {
+position: absolute;
+left: -2px;
+top: -2px;
+}
+.img_foot {
+position: absolute;
+top: 2645px;
+left: -2px;
+}
+
+.img_foot_page {
+position: absolute;
+left: -2px;
+top: 3910px;
+}
+.img_car {
+position: absolute;
+top: 500px;
+}
+.img_zombie {
+position: absolute;
+left: 1185px;
+top: 1200px;
+}
+.img_butterfly {
+position: absolute;
+left: 100px;
+top: 2100px;
+}
+/* Add a blue text color to links */
+
+ #layer_about_us {
+   color: #F6DEBB;
+   position: absolute;
+   left: 50%;
+   top: 2860px;
+
+}
+
+#navigation {
+    position: fixed;
+    z-index: 3;
+    top: -2px;
+    left: -2px;
+    font-family: Roboto;
+    font-style: bold;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #3C2500;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+.yakor {
+  left: 100px;
+  top: 2100px;
+}
+#site {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 490px;
+    top: 42px;
+}
+#game {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 580px;
+    top: 42px;
+}
+#account {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 670px;
+    top: 42px;
+}
+
+#other_players {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 760px;
+    top: 42px;
+}
+
+ </style>
+<img class="img_logo" src="/static/img/logo.png"/>
+<div id="navigation">
+    <img src="/static/img/navigate_panel.png"/>
+    <div id="site"><a href="/">САЙТ</a></div>
+    <div id="game"><a href="/users/game">ИГРА</a></div>
+    <div id="account">АККАУНТ</div>
+    <div id="other_players"><a href="/users/scoreboard">ИГРОКИ</a></div>
+</div>
+<img class="img_foot" src="/static/img/foot.png"/>
+<img class="img_foot_page" src="/static/img/foot_page.png"/>
+<img class="img_car" src="/static/img/car.png"/>
+<img class="img_zombie" src="/static/img/zombie.png"/>
+<img class="img_butterfly" src="/static/img/butterfly.png"/>
+
+<div id="layer1_1"><h1>Начни играть</h1></div>
+<div id="layer1_2"><h2>Погрузись в самое улетное и незабываемое приключение<br>в своей жизни. Узнай о том, как эпидемия привела<br>к краху всей человеческой цивилизации</h2>
+</div>
+
+<div id="layer2_1"><h1>Свирепые мутанты</h1></div>
+<div id="layer2_2"><h2>Ощути на себе гнев мутировавших тварей<br>и будь на чеку: опасность может застигнуть ото всюду!</h2>
+</div>
+
+<div id="layer3_1"><h1>Эффект бабочки</h1></div>
+<div id="layer3_2"><h2>Учись на ошибках, каждый твой выбор в корень меняет<br> каждый аспект игры. Более 1 000 000 вариантов развитиия<br> событий и более 5 концовок ждут тебя
+уже сегодня!</h2>
+</div>
+
+<div id="layer_enter"><div id="h1_key">Вход</div></div>
+
+<form method="post" action="/sign_up_user"  style="max-width: 500px;">
+    <input class="name_btn" type="text" name="name" placeholder="Имя" value="" autocomplete="off"/>
+    <input class="email_btn" type="email" name="login" placeholder="Почта" value="" autocomplete="off"/>
+    <br>
+    <br>
+    <input class="password_btn" type="password" name="password" placeholder="Пароль" value="" autocomplete="off"/>
+    <p style="color: #f00;">{{status}}</p>
+    <br>
+    <br>
+    <div style="display: flex; flex-direction: row; align-content: center; align-items: center; justify-content: space-between;">
+        <input class="registerbtn" type="submit" value="Зарегистрироваться">
+        <div id="layer_registration"><a href="/sign_up" id="h2_key">Регистрация</a></div>
+    </div>
+</form>
+<a id="yakor" name="top"></a>
+<div id="layer_about"><div id="h1_key">О нас</div></div>
+<div id="layer_about_us"><h2>Мы Российcкая компания из Казани, которая занимается разработкой игр и не только.<br>
+Задумывались ли вы, что будет, если совместить страсть к творчеству и программирование?<br>
+Полет фантазий даст миллионы идей, а навыки создания игр воплотят их в жизнь.<br>
+Не верьте тем, кто говорит, что мечта - всего лишь мечта.<br>
+Мечта - это идея, а идея - это маршрут к цели!<br>
+<br>
+Арсений Лаптев - создатель компании “Blacksun Studios”, программист и гейм-дизайнер,<br>
+с детства мечтал творить игры. Он верил в это и старался вкладывать душу в любой проект!<br>
+Таким образом... </h2></div>
+<div id="layer_renewal"><div id="h2_key">Обновления</div></div>
+<audio src="/static/sounds/mainmusic.mp3" autoplay="autoplay">
+</audio>
+
+</body>
+</html>

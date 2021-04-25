@@ -1,0 +1,254 @@
+<html>
+<!DOCTYPE HTML>
+<head>
+    <meta charset="UTF-8">
+	<title> {{ title }} </title>
+</head>
+
+<body>
+<style type="text/css">
+a {
+    color: #3C2500;
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+}
+html {
+ overflow-x: hidden;
+}
+body {
+    background-color: #FFF8EF;
+}
+h1 {
+    position: absolute;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 60px;
+
+	color: #A88143;
+}
+
+#head {
+    z-index: 2;
+    position: absolute;
+    left: 136px;
+    top: 115px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#head_text {
+    z-index: 2;
+    position: absolute;
+    height: 38px;
+    left: 230px;
+    top: 125px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 41px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+h2 {
+    z-index: 2;
+    position: absolute;
+    width: 735px;
+    height: 515px;
+    left: 95px;
+    top: 230px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 28px;
+color: #E7D9B9;
+}
+
+.img_bg {
+    position: absolute;
+    left: -2px;
+    top: 2px;
+}
+
+.text_field {
+    position: absolute;
+    left: 70px;
+    top: 130px;
+}
+.hero_field {
+    position: absolute;
+    left: 1320px;
+    top: 550px;
+}
+.inventory_field {
+    position: absolute;
+    left: 905px;
+    top: 130px;
+
+}
+#navigation {
+    position: fixed;
+    z-index: 3;
+    top: -2px;
+    left: -2px;
+    font-family: Roboto;
+    font-style: bold;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #3C2500;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+#site {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 490px;
+    top: 42px;
+}
+#game {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 580px;
+    top: 42px;
+}
+#account {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 670px;
+    top: 42px;
+}
+
+#other_players {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 760px;
+    top: 42px;
+}
+
+#exit {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 1660px;
+    top: 60px;
+}
+#user_name {
+    font-size: 30px;
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 1660px;
+    top: 24px;
+}
+
+p {
+    position: absolute;
+    z-index: 3;
+    font-family: Roboto;
+    left: 190px;
+    font-style: bold;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+#answer1 {
+    top: 850px;
+}
+
+#answer2 {
+    top: 870px;
+}
+
+#answer3 {
+    top: 890px;
+}
+
+.res_btn {
+    position: absolute;
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    left: 10%;
+    top: 940px;
+
+    background: #FFF0DA;
+    border: 1px solid rgba(168, 129, 67, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #A88143;
+    color: #F6DEBB;
+    border: none;
+    cursor: pointer;
+}
+
+.res_btn:hover {
+  background: #A88143
+}
+
+.table {
+    position: absolute;
+    z-index: 3;
+    left: 120px;
+    top: 850px;
+
+ }
+ </style>
+<img class="img_bg" src="/static/img/background.png"/>
+<div id="navigation">
+    <img src="/static/img/navigate_panel.png"/>
+    <div id="site"><a href="/">САЙТ</a></div>
+    <div id="game"><a href="/users/game">ИГРА</a></div>
+    <div id="account"><a href="/users/account">АККАУНТ</a></div>
+    <div id="other_players"><a href="/users/scoreboard">ИГРОКИ</a></div>
+    <div id="user_name">{{current_user.name}}</div>
+    <div id="exit"><a href="/users/sign_out">ВЫЙТИ</a></div>
+</div>
+<img class="text_field" src="/static/img/text_field.png"/>
+<img class="hero_field" src="/static/img/headhunter.png"/>
+<h2>{{text}}</h2>
+<p id="head_text">ВИЗИТ ВЕЖЛИВОСТИ</p>
+<p id="head">[I]</p>
+<img class="inventory_field" src="/static/img/inventory_field.png"/>
+<audio src="/static/sounds/gamemusic.mp3" autoplay="autoplay">
+</audio>
+
+<form method="post" action="/users/text_render"  style="max-width: 500px;">
+    <p id="answer1"><input name="radio" type="radio" value="1" checked>{{answers[0]}}</p>
+    <p id="answer2"><input name="radio" type="radio" value="2" checked>{{answers[1]}}</p>
+  <input class="res_btn" type="submit" value="Продолжить">
+ </form>
+
+</body>
+</html>

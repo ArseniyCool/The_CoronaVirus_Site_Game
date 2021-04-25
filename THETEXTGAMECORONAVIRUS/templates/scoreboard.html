@@ -1,0 +1,15 @@
+<h1>Игроки</h1>
+<table>
+    {% for user in users %}
+        <tr>
+            <td>{{user.name}} {{user.cell}}</td>
+            <td>
+                {% if current_user %}
+                    {% if current_user.id != user.id %}
+                        <a href="/users/add_user/{{user.id}}">Добавить в друзья</a>
+                    {% endif %}
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
